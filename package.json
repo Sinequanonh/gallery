@@ -1,0 +1,25 @@
+{
+  "name": "gallery",
+  "version": "1.0.0",
+  "description": "Image gallery",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sinequanonh/gallery.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sinequanonh/gallery/issues"
+  },
+  "homepage": "https://github.com/Sinequanonh/gallery#readme",
+  "dependencies": {
+    "angular": "^1.5.0",
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.1"
+  }
+}

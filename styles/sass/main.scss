@@ -1,0 +1,61 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+body {
+	background-color: #f9f9f9;
+}
+
+.img--wrapper {
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+	width: 128px;
+	height: 128px;
+	img, video {
+		min-width: 128px;
+		min-height: 128px;
+		max-width: 265%;
+		max-height: 265%;
+		position: absolute;
+		background-size: cover;
+		top: -50%;
+		left: -50%;
+		bottom: -50%;
+		right: -50%;
+	}
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.selected {
+	border: 2px solid green;
+}
+
+#selected--img {
+	display: block !important;
+	overflow: hidden !important;
+	position: relative !important;
+	margin-bottom: 4px;
+	margin-top: -1px;
+	cursor: pointer;
+	img, video {
+		max-width: 100%;
+	}
+}
+
+.navbar--top {
+	margin-bottom: 4px;
+	width: 100%;
+	height: 60px;
+	box-shadow: 0 1px 4px rgba(0,0,0,.15);
+    background-color: #ffffff;
+}
+
+@media (min-width: 992px) {
+	.container {
+	     width: 686px; 
+	}
+}

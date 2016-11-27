@@ -1,0 +1,39 @@
+<div class="container" ng-keyup="keyPress($event)"><center>
+
+	<span ng-repeat="img in images">
+
+			<div ng-click="selectImg(img, $index)" class="img--wrapper" id="{{img.url}}" ng-class="{'selected': active}">
+					<!-- JPG/PNG -->
+					<img ng-if="img.format == 'jpg' || img.format == 'png' || img.format == 'gif'" ng-src="img/{{img.url}}" >
+					<!-- MP4 -->
+					<video id="{{img.url}}" ng-if="img.format == 'mp4'">
+					  <source ng-src="img/{{img.url}}" type="video/mp4">
+					</video>
+					
+					<!-- WEBM -->
+					<video id="{{img.url}}" ng-if="img.format == 'webm'">
+					  <source ng-src="img/{{img.url}}" type="video/webm">
+					</video>
+			</div>
+		<div class="row--wrap" ng-if="!(($index + 1) % 5)">
+		</div>
+	</span>
+</center>
+
+
+	<div ng-if="selectedImg" id="selected--img">
+		<center>
+			<!-- JPG/PNG -->
+			<img ng-if="imgSelected.format == 'jpg' || imgSelected.format == 'png' || imgSelected.format == 'gif'" ng-src="img/{{imgSelected.url}}">
+			<!-- MP4 -->
+			<video ng-if="imgSelected.format == 'mp4'" autoplay loop>
+			  <source ng-src="img/{{imgSelected.url}}" type="video/mp4">
+			</video>
+			<!-- WEBM -->
+			<video ng-if="imgSelected.format == 'webm'" autoplay loop>
+			  <source ng-src="img/{{imgSelected.url}}" type="video/webm">
+			</video>
+		</center>
+	</div>
+
+</div>

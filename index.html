@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="FR-fr" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Gallery</title>
+
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles/stylesheets/main.css" rel="stylesheet">
+  </head>
+  <body>
+
+  <div class="navbar--top">
+    <div class="container">
+      <h3>NSFW</h3>
+    </div>
+  </div>
+
+
+  <ui-view></ui-view>
+
+    <!-- DEPENDENCIES -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+    <!-- APP -->
+     <script src="app/app.js"></script>
+     <script src="app/routes.js"></script>
+
+     <!-- CONTROLLERS -->
+     <script src="app/home/homeCtrl.js"></script>
+
+     <!-- SERVICES --> 
+    <script src="app/home/homeSvc.js"></script>
+  </body>
+</html>
